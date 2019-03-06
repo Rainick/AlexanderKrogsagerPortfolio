@@ -39,6 +39,13 @@ h1 {
 	font-size: 48px;
 	text-shadow: black;
 }
+h5 {
+	color: white;
+	font-family: Nunito;
+	font-size: 18px;
+	text-shadow: black;
+	text-align: left;
+}
 p {
 	color: white;
 	font-size: 16px;
@@ -92,36 +99,15 @@ header a {
 .work a img {
 	margin: 1%;
 	width: 45%;
-	height: 332px;
-	
 }
-/*-----whatIDO-----*/
-.whatIDo {
-	text-align: center;
-	margin: 100px 0 200px 0;
-	position: relative;
-}
-.whatIDo h1 {
-	color: #13A3FD;
-}
-.iAm {
-	color: #25272C;
-	font-size: 150px;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	-webkit-transform: translateX (-50%);
-	top: -20px;
-	z-index: -1;
-}
-/*-----work2-----*/
-.work2 {
-	width: 100%;
+
+/*-----about-----*/
+.about {
 	text-align: center;
 }
-.work2 a img {
-	margin: 1%;
-	width: 92%;
+.about2 a img {
+	margin-right: 10px;
+	padding: 25px;
 }
 
 /*-----footer-----*/
@@ -154,41 +140,9 @@ footer p {
 		margin: 30px auto 100px auto;
 		text-align: left;
 	}
-	.whatIDo {
-		text-align: left;
-		width: 90%;
-		margin: 70px auto 100px auto;
-	}
-	.iAm {
-		visibility: hidden;
-	}
 	footer {
 		text-align: left;
 		width: 90%;
 		margin: 90px auto;
 	}
-}
-function toggleFullScreen(elem) {
-    // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-    if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
-        if (elem.requestFullScreen) {
-            elem.requestFullScreen();
-        } else if (elem.mozRequestFullScreen) {
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullScreen) {
-            elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-    } else {
-        if (document.cancelFullScreen) {
-            document.cancelFullScreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-        } else if (document.webkitCancelFullScreen) {
-            document.webkitCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        }
-    }
 }
